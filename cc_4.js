@@ -27,5 +27,16 @@ for (let product of products) {
         break;
     }
 }
-
-
+//Step 4: Creating a variable customer type
+if (customerType === "student") {
+    return - 0.05
+} else if (customerType ==="senior")
+    return - 0.07
+    else {
+    return - 0
+}
+//Step 5: Checking out 3 customers
+let customerTypes = ["regular", "studnet", "senior"];
+for (let i = 0; i <3; i++) {
+   
+}
