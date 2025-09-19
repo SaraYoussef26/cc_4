@@ -10,33 +10,73 @@ let products = [
 ];
 //Step 3: Applying discounts to products
 for (let product of products) {
+    let discount = 0;
     switch (product.category) {
-    case "electornics":
-        discount = 0.2
+    case "electronics":
+        discount = 0.2;
         break;
     case "apparel":
-        discount = 0.15
+        discount = 0.15;
         break;
     case "groceries":
     case "household":
-        discount = 0.1
+        discount = 0.1;
         break;
-    case "other":
-        //no discount
-        default:
+    default:
+        discount = 0;
         break;
     }
+    product.price *= (1 - discount);
 }
 //Step 4: Creating a variable customer type
-if (customerType === "student") {
-    return - 0.05
-} else if (customerType ==="senior")
-    return - 0.07
-    else {
-    return - 0
-}
+let customerType = ["regular", "student", "senior"];
+if (customerType === "student") { extraDiscount = 0.05; }
+else if (customerType === "senior") { extraDiscount = 0.07; }
+else { extraDiscount = 0; }
+
+
 //Step 5: Checking out 3 customers
-let customerTypes = ["regular", "studnet", "senior"];
-for (let i = 0; i <3; i++) {
-   
+let customerTypes = ["regular", "student", "senior"];
+for (let i = 1; i <= 3; i++);{
+let customerType = customerTypes [i - 1];
+let extraDiscount = 0;
+
+if (customerType === "student") { extraDiscount = 0.05; }
+else if (customerType === "senior") { extraDiscount = 0.07; }
+else { extraDiscount = 0; }  
 }
+let subtotal = 0;
+
+for (let item of items) {
+    if (item.inventory >= 0) {
+        subtotal +=item.price;
+        item.inventory--;
+    } 
+}
+let finalTotal = subtotal * (1 - extraDiscount);
+console.log (`Customer ${i}: $${finalTotal.toFixed(2)}`);
+
+//Step 6
+let cellPhone = products.find(product => product.name === "Cell Phone");
+for (let key in cellPhone) {
+ console.log(`${key}: ${cellPhone[key]}`);
+}
+
+//Step 7
+let skirt = products.find(product => product.name === "Skirt");
+for (let [key, value]of Object.entries(skirt)){
+    console.log(`${key}: ${value}`);
+}
+let strawberry = products.find(product => product.name === "strawberry");
+for (let [key, value]of Object.entries(strawberry)){
+    console.log(`${key}: ${value}`);
+}
+let paperTowel = products.find(product => product.name === "papertTowel");
+for (let [key, value]of Object.entries(paperTowel)){
+    console.log(`${key}: ${value}`);
+}
+let pencil = products.find(product => product.name === "pencil");
+for (let [key, value]of Object.entries(pencil)){
+    console.log(`${key}: ${value}`);
+}
+
