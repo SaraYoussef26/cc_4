@@ -29,16 +29,16 @@ for (let product of products) {
     product.price *= (1 - discount);
 }
 //Step 4: Creating a variable customer type
-let customerType = ["regular", "student", "senior"];
-if (customerType === "student") { extraDiscount = 0.05; }
+let customerTypes = ["regular", "student", "senior"];
+if (customerTypes === "student") { extraDiscount = 0.05; }
 else if (customerType === "senior") { extraDiscount = 0.07; }
 else { extraDiscount = 0; }
 
 
 //Step 5: Checking out 3 customers
-let customerTypes = ["regular", "student", "senior"];
-for (let i = 1; i <= 3; i++);{
-let customerType = customerTypes [i - 1];
+let customerType = ["regular", "student", "senior"];
+for (customerTypes of regular) {
+let customerType = customerTypes [ 1 ];
 let extraDiscount = 0;
 
 if (customerType === "student") { extraDiscount = 0.05; }
