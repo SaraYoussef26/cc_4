@@ -38,12 +38,12 @@ else { extraDiscount = 0; }
 //Step 5: Checking out 3 customers
 let customerType = ["regular", "student", "senior"];
 for (customerTypes of regular) {
-let customerType = customerTypes [ 1 ];
+let customerType = customerTypes [ 1 ];}
 let extraDiscount = 0;
 
 if (customerType === "student") { extraDiscount = 0.05; }
 else if (customerType === "senior") { extraDiscount = 0.07; }
-else { extraDiscount = 0; }  
+else { extraDiscount = 0; 
 }
 let subtotal = 0;
 
